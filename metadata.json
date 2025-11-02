@@ -1,0 +1,8 @@
+{
+  "name": "HCM AI Onboarding Agent",
+  "description": "A prototype for a customizable AI agent to help new employees through the onboarding process, including setting up direct deposit, uploading documents, and answering common questions.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}

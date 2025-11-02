@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCM AI Onboarding Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Using a more pleasant default font */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .wayfinding-path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw-line 1.5s ease-out forwards;
+      }
+      @keyframes draw-line {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      .map-transform-group {
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+      }
+      .location-icon-group {
+        transition: transform 0.2s ease-in-out;
+      }
+      .location-icon-group:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
